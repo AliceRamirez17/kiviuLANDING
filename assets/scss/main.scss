@@ -1,0 +1,658 @@
+@import "./bootstrap.scss";
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a {
+    font-family: "Inter", sans-serif;
+}
+
+p {
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.container-100 {
+    width: 100%;
+}
+
+.navbar__banner {
+    .navbar__banner--container {
+        background-color: $primary;
+        padding-bottom: 100px;
+
+        header {
+            .btn__login {
+                color: $blue-500;
+                font-weight: 600;
+            }
+
+            .btn__login:hover {
+                outline: 2px solid #fff;
+                background-color: rgba(0, 0, 0, 0);
+                color: #fff;
+            }
+
+            .menu--mob{
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                z-index: 100;
+                background-color: $blue-500;
+                grid-template-rows: 76px auto;
+
+                &__header {
+                    &__btn {
+                        height: 60px;
+
+                        i {
+                            font-size: 28px;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &__items {
+                    &__logo {
+                        img {
+                            height: 50px;
+                        }
+                    }
+
+                    &__btn {
+                        font-weight: 500;
+                        color: $blue-500;
+                    }
+                }
+            }
+
+            .navbar--mob {
+                z-index: 4;
+                background-color: $blue-500;
+                width: 100%;
+                position: fixed;
+
+                &__logo {
+                    img {
+                        height: 50px;
+                    }
+                }
+
+                &__btn {
+                    i {
+                        font-size: 28px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .banner__info {
+            padding-top: 128px;
+            padding-bottom: 30px;
+
+            &__isotipo {
+                width: 120px;
+            }
+
+            &__buttons {
+                a {
+                    font-weight: 500;
+                }
+
+                a:first-child {
+                    color: $blue-500;
+                }
+                a:nth-child(2):hover {
+                    color: $blue-500;
+                }
+            }
+        }
+    }
+
+    .banner__img {
+        padding-bottom: 60px;
+
+        .banner__img--container {
+            width: 100%;
+            position: relative;
+            z-index: 3;
+            margin-top: -100px;
+
+            img {
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+main {
+    h2 {
+        color: $blue-500;
+        font-weight: 600;
+    }
+
+    .objetivos {
+        margin-bottom: 60px;
+
+        &__info {
+            .img__info {
+                border-radius: 8px;
+            }
+
+            &__textos {
+                &__item {
+                    border-radius: 8px;
+                    cursor: pointer;
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 36px;
+                        height: 36px;
+                        background-color: $blue-500;
+
+                        i {
+                            display: inline-block;
+                            width: 36px;
+                            font-size: 20px;
+                            color: #fff;
+                        }
+                    }
+
+                    p > span{
+                        color: $blue-500;
+                        font-weight: 600;
+                    }
+                }
+
+                &__item:hover {
+                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.075);
+                }
+            }
+
+            &__img {
+                align-items: center;
+
+                .img__ilustracion {
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+    .beneficios {
+        margin-bottom: 60px;
+
+        &__buttons {
+            button {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        &__slider {
+            // Mobile
+            .carousel--mob {
+                top: auto !important;
+                bottom: 0;
+                margin-left: 0;
+                margin-right: 0;
+                justify-content: flex-start;
+
+                .btn__indicador--mob {
+                    border: none;
+                    border-radius: 5px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: $gray-300 !important;
+                    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                }
+
+                .btn__indicador--mob.active {
+                    width: 28px;
+                    background-color: $blue-500 !important;
+                } 
+            }
+
+            .inner--mob {
+                padding-top: 0 !important;
+
+                .item--mob {
+                    height: 460px;
+                }
+            }
+
+            .carousel-indicators {
+                top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                justify-content: flex-start;
+
+                // Desktop
+                .btn__indicador {
+                    border: none;
+                    outline: 2px solid $blue-500;
+                    background-color: rgba(0, 0, 0, 0);
+                    border-radius: 5px;
+                    width: 200px;
+                    height: 30px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                    text-indent: 0;
+                    opacity: 1;
+                }
+
+                .btn__indicador:hover {
+                    color: $blue-500;
+                }
+
+                .btn__indicador.active {
+                    border: none;
+                    outline: none;
+                    background-color: $blue-500 !important;
+                }
+
+                .btn__indicador.active:hover {
+                    color: #fff;
+                }
+            }
+
+            .carousel-inner {
+                padding-top: 80px;
+            }
+
+            &__item {
+                background-color: #fff;
+
+                &__text {
+                    width: 100%;
+
+                    i {
+                        font-size: 28px;
+                        color: $blue-500;
+                    }
+
+                    h5 {
+                        color: $blue-500;
+                    }
+                }
+
+                &__img {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .preguntas {
+        margin-bottom: 60px;
+
+        p > span{
+            color: $blue-500;
+            font-weight: 600;
+        }
+
+        .accordion {
+            .accordion-item{
+                border: none;
+
+                .accordion-header {
+                    border-radius: 50px;
+                    border: 2px solid $blue-500;
+
+                    .accordion-button {
+                        font-size: 12px;
+                        line-height: 28px;
+                        border-radius: 50px;
+                    }
+
+                    .accordion-button:not(.collapsed) {
+                        box-shadow: none;
+                        background-color: rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+
+            .accordion-button.collapsed::after {
+                background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/%3e%3c/svg%3e");
+            }
+              
+            .accordion-button:not(.collapsed)::after {
+                background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3e%3c/svg%3e");
+            }
+        }
+    }
+
+    .testimoniales {
+        margin-bottom: 60px;
+
+        &__info {
+            .img__info {
+                border-radius: 8px;
+            }
+
+            &__img {
+                align-items: center;
+
+                .img__ilustracion {
+                    width: 75%;
+                }
+            }
+
+            &__textos {
+                h3 {
+                    color: $blue-500;
+                    font-weight: 600;
+                }
+
+                &__slider {
+                    .carousel-indicators {
+                        margin-left: 0;
+                        margin-right: 0;
+                        justify-content: flex-start;
+
+                        .btn__indicador {
+                            border: none;
+                            border-radius: 5px;
+                            width: 10px;
+                            height: 10px;
+                            background-color: $gray-300 !important;
+                            transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                        }
+
+                        .btn__indicador.active {
+                            width: 28px;
+                            background-color: $blue-500 !important;
+                        } 
+                    }
+
+                    &__item {
+                        height: 360px;
+                        background-color: #fff;
+                        
+                        &__estrellas {
+                            i {
+                                font-size: 20px;
+                                color: $blue-500;
+                            }
+                        }
+
+                        p > span{
+                            color: $blue-500;
+                            font-weight: 600;
+                        }
+
+                        &__avatar {
+                            img {
+                                width: 48px;
+                                height: 48px;
+                            }
+
+                            p {
+                                font-size: 10px;
+                                line-height: inherit;
+                            }
+                        }
+                    }
+                }
+            }  
+        }
+    }
+}
+
+.contact__footer {
+    &--container {
+        background-color: $primary;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .contact {
+            margin-bottom: 120px;
+
+            &__info {
+                h2 {
+                    font-weight: 600;
+                }
+
+                &__icono {
+                    width: 24px;
+                    height: auto;
+                }
+
+                a {
+                    font-size: 12px;
+                }
+            }
+
+            &__img {
+                img {
+                    width: 75%;
+                }
+            }
+        }
+
+        footer {
+            .footer__info {
+                margin-bottom: 30px;
+
+                h4 {
+                    color: #fff;
+                    font-weight: 600;
+                }
+    
+                &__logo {
+                    padding-left: 24px;
+                    padding-right: 24px;
+
+                    img {
+                        height: 60px;
+                    }
+                }
+
+                &__menu {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+    
+                &__redes {
+                    padding-left: 24px;
+                    padding-right: 24px;
+
+                    &__icono {
+                        width: 24px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// breakpoint lg
+@media screen and (min-width: 992px) {
+    .container-75 {
+        width: 75%;
+    }
+
+    .navbar__banner {
+        .navbar__banner--container {
+            padding-bottom: 300px;
+            margin: 16px;
+            border-radius: 16px;
+
+            header {
+                .navbar--desktop {
+                    &__logo {
+                        img {
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+
+            .banner__info {
+                padding-top: 80px;
+                // padding-bottom: 80px;
+
+                &__isotipo {
+                    width: 180px;
+                }
+            }
+        }
+
+        .banner__img {
+            padding-bottom: 120px;
+
+            .banner__img--container {
+                width: 75%;
+                margin-top: -300px;
+
+                img {
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+
+    main {
+        .objetivos {
+            margin-bottom: 120px;
+
+            &__info {
+                gap: 40px;
+
+                .img__info {
+                    border-radius: 16px;
+                }
+
+                &__textos {
+                    width: 45%;
+
+                    &__item {
+                        border-radius: 16px;
+                    }
+                }
+
+                &__img {
+                    width: 55%;
+                    position: relative;
+                    align-items: inherit;
+
+                    .img__ilustracion {
+                        width: 50%;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        margin-top: 160px;
+                    }
+                }
+            }
+        }
+
+        .beneficios {
+            margin-bottom: 120px;
+    
+            &__slider {
+                &__item {
+                    gap: 40px;
+
+                    &__text {
+                        width: 45%;
+                    }
+
+                    &__img {
+                        width: 55%;
+
+                        img {
+                            border-radius: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .preguntas {
+            margin-bottom: 120px;
+        }
+
+        .testimoniales {
+            margin-bottom: 120px;
+
+            &__info {
+                gap: 40px;
+
+                .img__info {
+                    border-radius: 16px;
+                }
+
+                &__img {
+                    width: 45%;
+                    position: relative;
+                    align-items: flex-end;
+
+                    .img__ilustracion {
+                        width: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        margin-top: 160px;
+                    }
+                }
+
+                &__textos {
+                    width: 55%;
+
+                    &__slider {
+                        &__item {
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact__footer {
+        &--container {
+            margin: 16px;
+            border-radius: 16px;
+            padding-top: 80px;
+            // padding-bottom: 80px;
+
+            .contact {
+                gap: 40px;
+
+                &__info {
+                    width: 50%;
+                }
+
+                &__img {
+                    width: 50%;
+                }
+            }
+
+            footer {
+                .footer__info {
+                    margin-bottom: 80px;
+
+                    &__logo {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+        
+                    &__redes {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+        }
+        }
+    }
+}
