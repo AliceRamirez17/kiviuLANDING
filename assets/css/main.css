@@ -10751,8 +10751,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, ul, li, a {
 }
 
 p {
-  font-size: 12px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 32px;
 }
 
 .container-100 {
@@ -10978,8 +10978,8 @@ main .preguntas .accordion .accordion-item .accordion-header {
   border: 2px solid #0d6efd;
 }
 main .preguntas .accordion .accordion-item .accordion-header .accordion-button {
-  font-size: 12px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 32px;
   border-radius: 50px;
 }
 main .preguntas .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
@@ -11026,7 +11026,7 @@ main .testimoniales__info__textos__slider .carousel-indicators .btn__indicador.a
   background-color: #0d6efd !important;
 }
 main .testimoniales__info__textos__slider__item {
-  height: 360px;
+  height: 440px;
   background-color: #fff;
 }
 main .testimoniales__info__textos__slider__item__estrellas i {
@@ -11042,7 +11042,7 @@ main .testimoniales__info__textos__slider__item__avatar img {
   height: 48px;
 }
 main .testimoniales__info__textos__slider__item__avatar p {
-  font-size: 10px;
+  font-size: 12px;
   line-height: inherit;
 }
 
@@ -11062,7 +11062,7 @@ main .testimoniales__info__textos__slider__item__avatar p {
   height: auto;
 }
 .contact__footer--container .contact__info a {
-  font-size: 12px;
+  font-size: 14px;
 }
 .contact__footer--container .contact__img img {
   width: 75%;
@@ -11082,7 +11082,7 @@ main .testimoniales__info__textos__slider__item__avatar p {
   height: 60px;
 }
 .contact__footer--container footer .footer__info__menu a {
-  font-size: 12px;
+  font-size: 14px;
 }
 .contact__footer--container footer .footer__info__redes {
   padding-left: 24px;
@@ -11093,6 +11093,11 @@ main .testimoniales__info__textos__slider__item__avatar p {
   height: auto;
 }
 
+@media screen and (min-width: 768px) {
+  main .testimoniales__info__textos__slider__item {
+    height: 300px;
+  }
+}
 @media screen and (min-width: 992px) {
   .container-75 {
     width: 75%;
@@ -11193,7 +11198,7 @@ main .testimoniales__info__textos__slider__item__avatar p {
     width: 55%;
   }
   main .testimoniales__info__textos__slider__item {
-    height: 300px;
+    height: 420px;
   }
 
   .contact__footer--container {
@@ -11220,5 +11225,10 @@ main .testimoniales__info__textos__slider__item__avatar p {
   .contact__footer--container footer .footer__info__redes {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .testimoniales__info__textos__slider__item {
+    height: 360px;
   }
 }

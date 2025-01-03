@@ -5,8 +5,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a {
 }
 
 p {
-    font-size: 12px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 32px;
 }
 
 .container-100 {
@@ -307,8 +307,8 @@ main {
                     border: 2px solid $blue-500;
 
                     .accordion-button {
-                        font-size: 12px;
-                        line-height: 28px;
+                        font-size: 14px;
+                        line-height: 32px;
                         border-radius: 50px;
                     }
 
@@ -373,7 +373,7 @@ main {
                     }
 
                     &__item {
-                        height: 360px;
+                        height: 440px;
                         background-color: #fff;
                         
                         &__estrellas {
@@ -395,7 +395,7 @@ main {
                             }
 
                             p {
-                                font-size: 10px;
+                                font-size: 12px;
                                 line-height: inherit;
                             }
                         }
@@ -426,7 +426,7 @@ main {
                 }
 
                 a {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
             }
 
@@ -457,7 +457,7 @@ main {
 
                 &__menu {
                     a {
-                        font-size: 12px;
+                        font-size: 14px;
                     }
                 }
     
@@ -468,6 +468,23 @@ main {
                     &__icono {
                         width: 24px;
                         height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// breakpoint sm
+@media screen and (min-width: 768px) {
+    main {
+        .testimoniales {
+            &__info {
+                &__textos {
+                    &__slider {
+                        &__item {
+                            height: 300px;
+                        }
                     }
                 }
             }
@@ -611,7 +628,7 @@ main {
 
                     &__slider {
                         &__item {
-                            height: 300px;
+                            height: 420px;
                         }
                     }
                 }
@@ -653,6 +670,23 @@ main {
                     }
                 }
         }
+        }
+    }
+}
+
+// breakpoint xl
+@media screen and (min-width: 1200px) {
+    main {
+        .testimoniales {
+            &__info {
+                &__textos {
+                    &__slider {
+                        &__item {
+                            height: 360px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
